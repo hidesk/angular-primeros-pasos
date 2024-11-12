@@ -28,7 +28,7 @@
        <!-- <span> Es el Primero: {{i === 0}}</span>
        <span> Es el Ultimo: {{i === characterList.length -1}}</span> -->
 
-       <button class="btn btn-danger" (click)="onDeleteCharacter(i)">X</button>
+       <button (click)="onDeleteCharacter(character.id)" class="btn btn-danger" >X</button>
       </li>
 
     </ul>

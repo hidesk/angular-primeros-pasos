@@ -13,15 +13,18 @@ export class ListComponent {
     name: 'Trunks',
     power: 10
 }]
+
 @Output()
-onDelete: EventEmitter<number> = new EventEmitter();
+public onDelete: EventEmitter<string> = new EventEmitter();
 
-onDeleteId(index: number):void{
 
-}
 
-public onDeleteCharacter(index: number): void{
-  this.onDelete.emit( index);
+
+onDeleteCharacter(id?: string): void{
+
+  if (!id) return;
+  console.log({id});
+  this.onDelete.emit( id);
 
 }
 }
